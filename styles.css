@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-Regular.ttf') format('truetype');
+  
+}
+
+html,
+body{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.header{
+  background-color: #7DDF20;
+  padding: 24px;
+}
+
+.main{
+  padding: 32px 16px;
+  height: max-content;
+}
+
+.card{
+  background-color: #F2F2F2;
+  width: 400px;
+  height: 510px;
+  border-radius: 8px;
+  margin: 24px 0;
+}
+
+.cards{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1280px) {
+  .cards{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+.image{
+  border-radius: 8px 8px 0 0;
+}
+
+.titulo{
+  font-size: 20px;
+  margin: 24px 0 12px 0;
+}
+
+.box-info{
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.box-image{
+  width: 22px;
+  height: 22px;
+  margin: 0 8px 12px 0;
+}
+
+.box-text{
+  font-size: 18px;
+  margin: 0 0 12px 0;
+}
+
+.box{
+  margin: 0 12px;
+  height: 200px;
+  position: relative;
+}
+
+.box-button{
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+}
+
+.button{
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  color: white;  
+  cursor: pointer; 
+}
+
+.presenca-confirmada{
+  background-color: #7DDF20;
+  cursor: default; 
+}
+
+.presenca-nao-confirmada{
+  background-color: #FF3853;
+}
+
+.button:hover{
+  opacity: 90%;
+}
+
+.footer{
+  background-color: #7DDF20;    
+  padding: 24px;
+}
+
+.footer-text{
+  font-size: 20px;
+  margin-top: 24px;
+}
