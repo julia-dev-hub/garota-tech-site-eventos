@@ -38,8 +38,8 @@ const listarEventos = data => {
       <div class="box-button">
       ${
         item.confirmouPresenca
-          ? `<button id="${item.id}" type="button" class="button presenca-confirmada" onclick="confirmarPresenca('${item.nome}', ${item.id}, ${item.confirmouPresenca})">Remover confirmação</button>`
-          : `<button id="${item.id}" type="button" class="button presenca-nao-confirmada" onclick="confirmarPresenca('${item.nome}', ${item.id}, ${item.confirmouPresenca})">Confirmar presença</button>`
+          ? `<button id="${item.id}" type="button" class="button presenca-confirmada" onclick="confirmarPresenca('${item.nome}', ${item.id})">Remover confirmação</button>`
+          : `<button id="${item.id}" type="button" class="button presenca-nao-confirmada" onclick="confirmarPresenca('${item.nome}', ${item.id})">Confirmar presença</button>`
       }
       </div>
     </div>  
@@ -48,10 +48,10 @@ const listarEventos = data => {
   })
 }
 
-const confirmarPresenca = (nome, id, presenca) => {
+const confirmarPresenca = (nome, id) => {
   let eventos = JSON.parse(localStorage.getItem('eventos'))
 
-  if (presenca) {
+  if (eventos[id].confirmouPresenca) {
     const button = document.getElementById(id)
     button.style.backgroundColor = '#FF3853'
     button.innerText = 'Confirmar presença'
@@ -70,6 +70,8 @@ const confirmarPresenca = (nome, id, presenca) => {
 
     alert(`Presença confirmada no evento: ${nome}`)
   }
+
+  listarEventos(JSON.parse(localStorage.getItem('eventos')))
 }
 
 document.body.onload = obterEventos
