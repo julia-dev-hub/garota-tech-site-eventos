@@ -1,52 +1,31 @@
+/* 
+
+Exercício 1 - Obter lista de eventos:
+- Utilizaremos a API Fetch para obter dados do arquivo json 'eventos.json'.
+- Caso a lista de eventos já tenha sido obtida anteriormente, utilize os dados do localStorage.
+- Caso contrário, faça uma requisição para obter os dados e armazene no localStorage.
+- Exiba a lista de eventos na tela a partir da função listarEventos.
+
+
+Exercício 2 - Exibir lista de eventos:
+- Mapeie a lista de eventos (método map).
+- Crie uma div com a classe "card-evento" para cada evento da lista de eventos.
+- Dentro de cada card, exiba a imagem do evento, o nome, a data e o endereço.
+- Adicione um botão "Confirmar presença" para cada evento.
+- Altere o texto do botão para "Remover confirmação" caso o usuário já tenha confirmado presença.
+
+*/
+
+
 const obterEventos = async () => {
-  let eventos = localStorage.getItem('eventos')
-
-  if (eventos) {
-    const data = JSON.parse(eventos)
-    listarEventos(data)
-  } else {
-    await fetch('eventos.json')
-      .then(res => res.json())
-      .then(data => {
-        eventos = data.eventos
-
-        localStorage.setItem('eventos', JSON.stringify(eventos))
-
-        listarEventos(eventos)
-      })
-  }
+   // Seu código aqui
+  
 }
 
 const listarEventos = data => {
-  data.map(item => {
-    const card = document.createElement('div')
-    card.className = 'card'
-    card.innerHTML = `            
-    <img class="image" width="100%" height="55%" src=${
-      item.imagem
-    } alt="Imagem do Evento" />
-    <div class="box">
-      <p class="titulo">${item.nome}</p>
-      <div class="box-info">
-        <img class="box-image" src="images/calendario.svg" alt="Data do Evento"/>
-        <p class="box-text">${item.data}</p>
-      </div>
-      <div class="box-info">
-        <img class="box-image" src="images/localizacao.svg" alt="Localização do Evento"/>
-        <p class="box-text">${item.endereco}</p>
-      </div>   
-      <div class="box-button">
-      ${
-        item.confirmouPresenca
-          ? `<button id="${item.id}" type="button" class="button presenca-confirmada" onclick="confirmarPresenca('${item.nome}', ${item.id})">Remover confirmação</button>`
-          : `<button id="${item.id}" type="button" class="button presenca-nao-confirmada" onclick="confirmarPresenca('${item.nome}', ${item.id})">Confirmar presença</button>`
-      }
-      </div>
-    </div>  
-    `
-    document.getElementById('eventos').appendChild(card)
-  })
+   // Seu código aqui
 }
+
 
 const confirmarPresenca = (nome, id) => {
   let eventos = JSON.parse(localStorage.getItem('eventos'))
@@ -75,3 +54,4 @@ const confirmarPresenca = (nome, id) => {
 }
 
 document.body.onload = obterEventos
+
