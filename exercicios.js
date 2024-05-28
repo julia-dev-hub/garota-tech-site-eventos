@@ -27,8 +27,8 @@ function confirmarPresenca(){
 }
 
 // Exercício 5 - DOM (Document Object Model):
-const titulo = document.querySelector('.titulo-pagina');
-titulo.style.color = "";
+const titulo = document.getElementsByClassName('titulo-pagina');
+titulo[0].style.color = "";
  
 // Seu código aqui
 
