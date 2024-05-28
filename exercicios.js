@@ -4,7 +4,7 @@ function receitaDeBolo() {
 }
 
 // Exercício 2 - if, else:
-function identificaIdade(idade){
+function identificaIdade(){
     // Seu código aqui
 }
 
@@ -40,25 +40,27 @@ Obs.: Importar esse arquivo no index.html
 
 Exercício 1 - Função e variáveis:
 
-- Crie uma função chamada receitaDeBolo que recebe vai receber 4 parâmentros: ingrediente1, ingrediente2, ingrediente3 e ingrediente4;
+- Crie uma função chamada "receitaDeBolo" que vai receber 4 parâmentros: ingrediente1, ingrediente2, ingrediente3 e ingrediente4;
 
-- Dentro da função, crie as variáveis (var) passo1 e passo2 com as seguintes strings:
-`Bata ${ingrediente1} com ${ingrediente4}`;
-`Acrescente ${ingrediente2} e ${ingrediente3}`;
+- Dentro da função, crie as variáveis (var) "passo1" e "passo2" com as seguintes strings:
+`Bata ${ingrediente1} com ${ingrediente4}`
+`Acrescente ${ingrediente2} e ${ingrediente3}`
 
-- Crie a variável (let) receita e atribua a ela a seguinte string:
-`${passo1} \n${passo2} \nMisture bem.`;
+- Crie a variável (let) "receita" e atribua a ela a seguinte string:
+`${passo1} \n${passo2} \nMisture bem.`
 
-- Por fim, exiba um alert com a variável receita.
+- Por fim, exiba um alerta (alert()) imprimindo a variável "receita".
 
 
 Exercício 2 - if, else:
 
-- Crie uma função chamada identificaIdade que recebe o parâmetro idade;
+- Crie uma função chamada "identificaIdade" que recebe o parâmetro "idade";
+
+- Imprima o parâmetro "idade" no console;
 
 - Dentro dessa função crie uma estrutura condicional que verifica se a idade é maior ou igual a 18;
 
-- Se for maior, exiba um alert com a mensagem "Você é maior de idade". Caso contrário, exiba um alert com a mensagem "Você é menor de idade".
+- Se for maior, exiba um alert() com a mensagem "Você é maior de idade". Caso contrário, exiba um alert() com a mensagem "Você é menor de idade".
 
 
 Exercício 3 - Objetos e Arrays:
@@ -80,7 +82,7 @@ Exercício 4 - Eventos:
 Exercício 5 - DOM (Document Object Model):
 
 - Obtenha o elemento h1 a partir da sua class e atribua a cor "#01602A".
-- Obtenha o elemento header a partir da sua class e atribua a cor "#7DDF20".
+- Atribua um id para a tag header no HTML e obtenha esse elemento header a partir do id criado. Atribua a ele a cor "#7DDF20".
 
 
 */
